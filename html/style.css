@@ -1,0 +1,118 @@
+body {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    background-color: rgb(30, 30, 45);
+    color: #ebdbb2;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    text-align: center;
+}
+
+h2 {
+    color: rgb(131, 92, 168);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(104, 157, 106);
+}
+
+a:hover {
+    color: rgb(104, 136, 157);
+}
+
+small {
+    font-size: 14px;
+}
+
+header {
+    margin-top: 1em;
+}
+
+nav {
+    background-color: rgb(25, 25, 35);
+    width: 100%;
+    padding: 1px 0px;
+
+    font-size: 22px;
+    word-spacing: 1em;
+}
+
+footer {
+    background-color: rgb(25, 25, 35);
+    width: 100%;
+    padding: 1px 0px;
+
+    font-size: 14px;
+
+    margin-top: 200px;
+}
+
+.clr {
+    clear: both;
+}
+
+.about {
+    text-align: left;
+    margin: 2em 1em;
+    min-height: 300px;
+    line-height: 1.75em;
+}
+
+.about img {
+    float: left;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.latest {
+    width: 100%;
+    text-align: left;
+    margin: 1em;
+}
+
+.list {
+	text-align: left;
+	padding: 3em 5em;
+}
+
+.entry {
+  padding: 0.1em 0em;
+  margin-top: 1em;
+  line-height: 0.3em;
+}
+
+.entry h4 {
+	font-size: 18px;
+}
+
+.entry small {
+	font-size: 16px;
+}
+
+.post {
+	padding:3em 2em;
+	text-align: left;
+}
+
+.post h1 {
+	color: rgb(131, 92, 168);
+}
+
+.post h2 {
+  color: #ebdbb2;
+	font-size: 20px;
+}
+
+.post p {
+	text-align: left;
+	line-height: 2em;
+}
