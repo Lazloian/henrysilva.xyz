@@ -8,8 +8,7 @@ function postList {
 
 	# write to line after latest section if post section is found
 	[ -z "POSTS_NUM" ] || sed -i "${POSTS_NUM}i <article class=\"entry\">\n\
-					<h3><a href=\"https://henrysilva.xyz/posts/$5.html\">$2</a></h3>\n\
-					<h4>$3</h4>\n\
+					<h3><a href=\"https://henrysilva.xyz/posts/$5.html\">$2</a> - $3</h3>\n\
 					<small>$4</small>\n\
 				</article>" $1
 }	
@@ -61,19 +60,19 @@ $TEXT
 </body>" >> "$POST_FILE"
 }
 
-FILES=$(ls -t ./posts/*.post) # All files in posts directory with .post extension
+FILES=$(ls -t ~/posts/*.post) # All files in posts directory with .post extension
 
 # locations of html files
-INDEX=./html/index.html
-ALL_LIST=./html/lists/all.html
-BOOK_LIST=./html/lists/books.html
-PROJ_LIST=./html/lists/projects.html
-TEMPLATE=./html/template.html
+INDEX=/var/www/henrysilva/index.html #./html/index.html
+ALL_LIST=/var/www/henrysilva/lists/all.html #./html/lists/all.html
+BOOK_LIST=/var/www/henrysilva/lists/books.html #./html/lists/books.html
+PROJ_LIST=/var/www/henrysilva/lists/projects.html #./html/lists/projects.html
+TEMPLATE=/var/www/henrysilva/template.html #./html/template.html
 
-POSTS_DIR=./html/posts # Directory to site posts directory
+POSTS_DIR=/var/www/henrysilva/posts #./html/posts # Directory to site posts directory
 
 POST_NUM=1 # The post number
-FRONT_POSTS=2 # Number of posts to be on the front page
+FRONT_POSTS=5 # Number of posts to be on the front page
 
 # clear posts from all lists
 clearPosts $INDEX
@@ -82,7 +81,7 @@ clearPosts $BOOK_LIST
 clearPosts $PROJ_LIST
 
 # delete all files in posts directory
-rm ./html/posts/*
+rm $POSTS_DIR/*
 
 # loop through each .post file in the posts directory
 for f in $FILES; do
@@ -117,6 +116,9 @@ for f in $FILES; do
 	# Keep track of how many posts have been processed
 	((POST_NUM++))
 done
+
+# restart nginx to update website
+systemctl restart nginx
 
 
 
