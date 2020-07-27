@@ -119,30 +119,3 @@ done
 
 # restart nginx to update website
 systemctl restart nginx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
