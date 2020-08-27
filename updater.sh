@@ -45,7 +45,7 @@ function makePost {
 	cp $6 $POST_FILE
 
 	# replace page title with post title
-	sed -i "s-<title>TITLE</title>-<title>$2</title>-" $POST_FILE
+	sed -i "s/TITLE/$2/g" $POST_FILE
 
 	# remove blank lines and add paragraphs to text
 	local TEXT=$(sed '/^$/ d ; s/^/<p>/ ; s_$_</p>_' <<< $4)
