@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Henry Silva's Projects</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Henry Silva's Project Portfolio</h1>
+  </header>
+
+  <section class="about">
+    <p>This is my project portfolio page showcasing a few of the projects that I have worked on. Most of the projects here focus on embedded systems. The rest of my projects can be found on my <a href="https://github.com/Lazloian" target="_blank" rel="noopener noreferrer">Github</a>.</p>
+  </section>
+
+  <div class="clr"></div>
+
+  <article class="project">
+    <h2>Custom LED Controller and App</h2>
+
+    <img src ="./media/led.gif" alt="LEDs" width="600px" height="400px">
+
+    <p>I made a LED controller to control a strip of over 300 neopixel LEDs to light my room. The controller is based on an ESP32 running FreeRTOS to control the LEDs and maintain a bluetooth connection at the same time. I wrote the ESP32 firmware in C++ using the Arduino IDE. Patterns are created and uploaded to the controller via an Android app developed using Android Studio in Java.</p> 
+
+    <div class="clr"></div>
+    <img src="./media/pcb.jpg" alt="PCB" width="600px" height="400px">
+
+    <p>I also made a custom PCB for the controller using KiCAD. I then ordered and assembled the PCB using a hot air station. The code for the ESP32 and Android app can be found <a href="https://github.com/Lazloian/LEDControllerV2" target="_blank" rel="noopener noreferrer">here</a> on Github.</p>
+  </article>
+
+  <div class="clr"></div>
+
+  <article class="project">
+    <h2>Robot Driver HUD and Ammo Detector</h2>
+
+    <img src ="./media/oled.png" alt="OLED" width="500px" height="300px">
+
+    <p>One of the first projects that I was placed on while on Purdue's Robomaster Team was to create a OLED HUD System for the robot driver. The HUD notified the driver of obstacles on all four sides of the robot and if the robot's ammo was low. The system used 6 time of flight sensors placed on the chassis to detect walls or other objects that are close.</p>
+
+    <div class="clr"></div>
+
+    <img src ="./media/ring.png" alt="OLED" width="400px" height="400px">
+    
+    <p>The main OLED control board interfaced with an ammo detection board placed in the robot's ammo hopper. The ammo detection board used an infrared diode and sensor to determine the ammo level. The small OLED screen would be placed in front of the robot's camera to display the info to the driver. The project journal and files can be found on this <a href="https://github.com/RoboMaster-Club/Electrical-System/tree/master/Heads-Up-Display-ToF" target="_blank" rel="noopener noreferrer">github repository</a>.</p>
+
+  </article>
+
+  <div class="clr"></div>
+
+  <article class="project">
+    <h2>Website Updater Scripts</h2>
+
+    <img src="./media/website.png" alt="website" width="600px" height="450px">
+
+    <p>I wrote shell scripts to automatically post content to my website <a href="https://henrysilva.xyz" target="_blank" rel="noopener noreferrer">henrysilva.xyz</a>. I write posts in a simple text file on my laptop and the post is automatically transferred and formatted to be displayed on the site. The projects on this page can also be found on my website <a href="https://henrysilva.xyz/lists/projects.html" target="_blank" rel="noopener noreferrer">here</a>. The scripts can be found <a href="https://github.com/Lazloian/henrysilva.xyz" target="_blank" rel="noopener noreferrer">here</a> on my Github.</p>
+  </article>
+
+  <div class="clr"></div>
+
+  <article class="project">
+    <h2>Dog Sleep Tracker</h2>
+
+    <img src="./media/dogpcb.JPG" alt="Dog PCB" width="600px" height="400px">
+
+    <p> I was interested to see how much my dog sleeps in a day. I used an ESP32 with an accelorometer to track movement and send the data via wifi. I used Node-RED on a Raspberry Pi to transfer the accelorometer data from the tracker device. The data was then displayed using a Grafana dashboard that allowed me to view the data from a web browser. I made a custom PCB in order to fit all the electronics in a small form factor. I 3D printed a case to allow for attachment of the device to a dog's collar. The code for this project can be found <a href="https://github.com/Lazloian/DogWifi" target="_blank" rel="noopener noreferrer">here</a> on my Github.</p>
+  </article>
